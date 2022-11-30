@@ -4,6 +4,9 @@ var preloadWebComponents = require('./preloadWebComponents'),
     createChromecastTech = require('./tech/ChromecastTech'),
     enableChromecast = require('./enableChromecast');
 
+var ChromecastSessionManager = require('./chromecast/ChromecastSessionManager');
+
+
 /**
  * @module index
  */
@@ -31,3 +34,5 @@ module.exports = function(videojs, userOpts) {
    createChromecastTech(videojs);
    enableChromecast(videojs);
 };
+
+module.exports.ChromecastSessionManager = ChromecastSessionManager;
